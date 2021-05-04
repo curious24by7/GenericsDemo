@@ -15,7 +15,6 @@ namespace GenericsDemo
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
              
             //ClassBasedGenerics
-
             PrintArray<int> printArray = new PrintArray<int>(intArray);
             printArray.ToPrint();
             Console.WriteLine("--------------------------------------");
@@ -25,27 +24,7 @@ namespace GenericsDemo
             new PrintArray<int>(intArray).ToPrint(); //easyway
             Console.WriteLine("--------------------------------------");
             new PrintArray<char>(charArray).ToPrint();
-
-<<<<<<< HEAD
-            Program.ToPrint<int>(intArray);
-            Program.ToPrint<double>(doubleArray);
-            Program.ToPrint<char>(charArray);
             Console.ReadKey();
         }
-
-        //MethodBasedGenerics
-        public static void ToPrint<T>(T[] inputArray)
-        {
-            foreach (var element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------------------");
-        }
-=======
-            Console.ReadKey();
-        }
-
->>>>>>> GenericsClassBased
     }
 }

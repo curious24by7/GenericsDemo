@@ -5,15 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GenericsDemo
-<<<<<<< HEAD
-{    
-    class PrintArray<T>
-    {    //ClassBased
-=======
 {     
     class PrintArray<T>
     {   //ClassBasedGenerics
->>>>>>> GenericsClassBased
         private T[] InputArray;
         public PrintArray(T[] inputArray)
         {
@@ -28,4 +22,5 @@ namespace GenericsDemo
         }
     }
 }
+
 
