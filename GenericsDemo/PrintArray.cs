@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace GenericsDemo
-{    
+{   //ClassBasedGenerics
     class PrintArray<T>
-    {    //ClassBased
+    {
         private T[] InputArray;
         public PrintArray(T[] inputArray)
         {

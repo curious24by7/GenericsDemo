@@ -14,20 +14,17 @@ namespace GenericsDemo
             double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
 
-            Program.ToPrint<int>(intArray);
-            Program.ToPrint<double>(doubleArray);
-            Program.ToPrint<char>(charArray);
+            //ClassBasedGenerics
+            PrintArray<int> printArray = new PrintArray<int>(intArray);
+            printArray.ToPrint();
+            Console.WriteLine("--------------------------------------");
+            PrintArray<double> printDouble = new PrintArray<double>(doubleArray);
+            printDouble.ToPrint();
+            new PrintArray<int>(intArray).ToPrint(); //easyway
+            Console.WriteLine("--------------------------------------");
+            new PrintArray<char>(charArray).ToPrint();
             Console.ReadKey();
         }
 
-        //MethodBasedGenerics
-        public static void ToPrint<T>(T[] inputArray)
-        {
-            foreach (var element in inputArray)
-            {
-                Console.WriteLine(element);
-            }
-            Console.WriteLine("----------------------------------");
-        }
     }
 }
